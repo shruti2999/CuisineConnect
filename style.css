@@ -1,0 +1,43 @@
+.Header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.logo{
+    width: 100px;
+    border-radius: 10px;
+}
+.nav>ul{
+    display: flex;
+    list-style-type:none;
+}
+.nav>ul>li{
+    padding: 10px;
+    margin: 10px;
+}
+.search{
+    padding: 10px;
+    justify-content: center;
+}
+.res-card{
+    width:200px;
+    height :300px;
+    border:1px solid black;
+    padding :5px;
+}
+.res-container{
+    display: flex;
+    flex-wrap:wrap;
+    padding : 5px;
+}
+.res-card:hover{
+    border:2px solid black;
+    cursor:pointer;
+}
+
+.food_a{
+    width: 190px;
+    height: 100px;
+    justify-content: center;
+    display: flex;
+}
