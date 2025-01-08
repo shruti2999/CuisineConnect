@@ -125,7 +125,7 @@ const resobj={
                       "link": "https://www.swiggy.com/city/bangalore/pizza-hut-6th-block-koramangala-rest10576",
                       "type": "WEBLINK"
                     }
-                  },
+                  
                   {
                     "info": {
                       "id": "5934",
@@ -537,6 +537,7 @@ const resobj={
                     }
                   }
                 };
+              
 
     
 
