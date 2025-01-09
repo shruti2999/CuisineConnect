@@ -8,12 +8,12 @@ import Body from "./components/body";
 const AppLayout = () => {
   return (
     <div className="app">
-      <Header />
-      <Body />
+      <Header/>
+      <Body/>
     </div>
   );
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<AppLayout />);
+root.render(<AppLayout/>);
