@@ -1,18 +1,19 @@
+import { LOGO_URL } from "../utils/contants";
 const Header = () => {
     return (
       <div className="Header">
         <div className="logo">
-          <img src="../images/images.png" />
+          <img src={LOGO_URL}/>
         </div>
         <div className="nav">
           <ul>
             <li>Home</li>
             <li>About</li>
-            <li>Contct</li>
+            <li>Contct</li>  
             <li>Card</li>
           </ul>
         </div>
       </div>
     );
   };
-  export default Header;
+  export default Header; 
