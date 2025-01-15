@@ -4,7 +4,7 @@ import resList from "../utils/mockData";
 
 
 const Body = () => {
-  const [ListOfRestro, setListOfRestro] = useState(resList);
+  const [ListOfRestaurants, setListOfRestaurants] = useState(resList);
 
   useEffect(() => {
     fetchData();
@@ -17,7 +17,7 @@ const Body = () => {
     const json = await data.json();
 
     console.log(json);
-    setListOfRestro(json?.data?.cards);
+    setListOfRestaurants(json?.data?.cards);
   };
 
   return ( 
@@ -26,17 +26,17 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-            const filterList = ListOfRestro.filter(
+            const filterList = ListOfRestaurants.filter(
               (res) => res.data.avgRating >= 4
             );
-            setListOfRestro(filterList);
+            setListOfRestaurants(filterList);
           }}
         >
           top restro
         </button>
       </div>
       <div className="res-container">
-        {ListOfRestro.map((restaurant) => (
+        {ListOfRestaurants.map((restaurant) => (
           <RestaurantCard key={restaurant.data.id} resData={restaurant} />
         ))}
       </div>
