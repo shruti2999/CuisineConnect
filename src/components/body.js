@@ -1,9 +1,10 @@
 import RestaurantCard from "./RestaurantCart";
 import { useEffect, useState } from "react";
+import resList from "../utils/mockData";
 
 
 const Body = () => {
-  const [ListOfRestro, setListOfRestro] = useState([]);
+  const [ListOfRestro, setListOfRestro] = useState(resList);
 
   useEffect(() => {
     fetchData();
@@ -19,7 +20,7 @@ const Body = () => {
     setListOfRestro(json?.data?.cards);
   };
 
-  return (
+  return ( 
     <div className="body">
       <div className="filter">
         <button
