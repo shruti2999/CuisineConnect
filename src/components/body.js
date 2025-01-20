@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCart";
 import { useEffect, useState } from "react";
 import resList from "../utils/mockData";
+import Shimmer from "./shimmer";
 
 const Body = () => {
    const [listOfRestaurants, setListOfRestaurants] = useState(resList);
@@ -18,11 +19,11 @@ const Body = () => {
     console.log(json);
     setListOfRestaurants(json?.data?.cards);
   };*/
-
-  // if (listOfRestaurants.length === 0) {
-  //   return <h1>Loading.....</h1>;
-  // }
-  return (
+// Conditional Rendering 
+  
+  return listOfRestaurants.length === 0 ?(
+  <Shimmer/> 
+   ):(
     <div className="body">
       <div className="filter">
         <button
