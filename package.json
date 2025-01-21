@@ -2,19 +2,20 @@
   "name": "react",
   "version": "1.0.0",
   "description": "This is a live course",
- 
   "scripts": {
     "start": "parcel index.html",
-    "build":" parcel build index.html",
+    "build": " parcel build index.html",
     "test": "jest"
   },
-  "author": "shruti", 
+  "author": "shruti",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.13.3",
     "process": "^0.11.10"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }
