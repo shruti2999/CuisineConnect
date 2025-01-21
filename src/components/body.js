@@ -5,20 +5,12 @@ import Shimmer from "./shimmer";
 
 const Body = () => {
    const [listOfRestaurants, setListOfRestaurants] = useState(resList);
-
+   const [SearchText,setSearchText] =  useState("");
   // useEffect(() => {
   //   fetchData();
   // }, []);
 
-  const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.5940499&lng=85.1376051&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-    const json = await data.json(); 
-
-    console.log(json);
-    setListOfRestaurants(json?.data?.cards);
-  };
+  
 // Conditional Rendering 
   
   return listOfRestaurants.length === 0 ?(
@@ -26,16 +18,20 @@ const Body = () => {
    ):(
     <div className="body">
       <div className="filter">
-        <div className="serach">
-          <input type="text" className="serach-box"/>
-          <button>search</button>
+        <div className="search">
+          <input type="text" className="search-box" value ={SearchText}onChange={(e)=>{
+            setSearchText(e.target.value)
+          }}/>
+          <button onClick={()=>{
+            
+          }}>search</button>
         </div>
         <button
           className="filter-btn"
           onClick={() => {
             const filterList = listOfRestaurants.filter(
               (res) => res.data.avgRating > 4
-            );
+            ); 
             setListOfRestaurants(filterList);
           }}
         >
